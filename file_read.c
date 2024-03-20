@@ -13,7 +13,7 @@ int main()
     fgets(name, 30, file);
     // fgets(name, 60, file);
     strcat(line, ", zoology");
-    fseek(file,  strlen(line), SEEK_CUR);
+    fseek(file,  -strlen(line), SEEK_CUR);
     fprintf(file, "%s", line);
     fclose(file);
     // printf("%s", name);
